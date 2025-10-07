@@ -407,11 +407,11 @@ transform : translate(-50%, -50%);
     top: -90px; /* Moves the image up */
     /* width: 100%; */
     height: auto;
-    margin-right: -5px;
+    /* margin-right: -5px; */
     opacity: 0;
     animation: ZoomIn 1s ease forwards, floatImageRight 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
-    right: 70px;
+    right: 250px;
     margin-bottom: 1.5rem;
 }
 
