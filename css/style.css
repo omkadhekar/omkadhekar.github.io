@@ -117,7 +117,15 @@ header{
 #menu-icon {
  font-size: 3.6rem;
  color: var(--text-color);
- 
+ display: none; 
+}
+
+#darkMode-icon{
+    font-size: 2.4rem;
+    color: var(--text-color);
+    cursor: pointer;
+    /* margin-right: 25px; */
+    margin-top: -0px;
 }
 
 .home {
@@ -125,6 +133,7 @@ header{
     justify-content: center;
     align-items: center;
     margin-bottom: -120px ;
+    margin-top: 60px ;
 }
 
 .home-content{
@@ -262,7 +271,8 @@ header{
     top: -90px; /* Moves the image up */
     /* width: 100%; */
     height: auto;
-    margin-right: -20px;
+    /* margin-right: -20px; */
+    margin-left: -100px; 
     opacity: 0;
     animation: ZoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
@@ -411,7 +421,7 @@ transform : translate(-50%, -50%);
     opacity: 0;
     animation: ZoomIn 1s ease forwards, floatImageRight 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
-    right: 250px;
+    right: 80px;
     margin-bottom: 1.5rem;
 }
 
@@ -796,14 +806,6 @@ transform : translate(-50%, -50%);
     top: -30px; /* You can adjust this to -15px or -20px if needed */
 }
 
-#darkMode-icon{
-    font-size: 2.4rem;
-    color: var(--text-color);
-    cursor: pointer;
-    /* margin-right: 25px; */
-    margin-top: -0px;
-}
-
 
 /* .tab-wrapper .tab-item.resume-item span{
     margin-top: -10px;
@@ -914,15 +916,159 @@ transform : translate(-50%, -50%);
     
 }
 
-/* @media (max-width: 1320px){
-    html {
+@media (min-width: 1885px) and (max-width: 2221px){
+
+   .home {
+    margin-top: 100px ;
+}
+
+   .home-img img {
+    margin-left: -200px;
+	margin-top: -80px;
+	
+	}
+
+.navbar {
+    padding-left: 900px;
+}
+
+.about-img img {
+    right: 50px;
+}
+
+.project-one {
+    top: -40px;
+}
+.project-second {
+    top:-10px;
+}
+
+.resume-item.project-second h4{
+    margin-top: 20px;
+}
+
+.resume-box.skills{
+    margin-top: -600px;
+}
+.resume-box.education{
+    margin-top: -400px;
+}
+}
+
+@media (min-width: 1200px) and (max-width: 1376px){
+    html{
         font-size: 55%;
     }
-     .header {
+   .home {
+        margin-top: 100px ;
+        margin-bottom: -80px;
+    }
+
+    .home-content {
+        margin-right: 200px;
+    }
+    
+   .home-img img {
+        margin-left: -200px;
+	    margin-top: -10px;
+	}
+
+    .navbar {
+        padding-left: 500px;
+    }
+
+    .about-img img {
+        right: 50px;
+    }
+
+    .project-one {
+        top: -40px;
+    }
+
+    .project-second {
+        top:-10px;
+    }
+
+    .resume-item.project-one h4{
+        margin-top: 70px;
+    }
+
+    .resume-item.project-second h4{
+        margin-top: 20px;
+    }
+
+    .resume-box.skills{
+        margin-top: 300px;
+    }
+
+    .resume-box.education{
+        margin-top: 30px;
+    }
+    
+    .resume-box.education .tab-item{
+        margin-top: 100px;
+    }
+
+    #darkMode-icon {
+        margin-left: 30px;
+    }
+}
+
+/* (min-width: 1200px) and */
+@media  (min-width: 1100px) and (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+     .navbar {
+        padding-left: 300px;
+    }
+
+    .about-info {
+        margin-top: 20px;
+    }
+
+    .about-content {
+        width : 70%;
+        margin-top: -100px;
+    }
+
+    .project-one {
+        top: -50px;
+    }
+
+    .project-second {
+        top:10px;
+    }
+
+    .resume-box.skills{
+        margin-top: -1300px;
+    }
+
+    .resume-box.education{
+        margin-top: -800px;
+    }
+    
+    .about-content {
+        width : 150%;
+    }
+    
+   .home-img img {
+        margin-left: -10px;
+	    margin-top: 70px;
+	}
+
+    .contact {
+    margin-top: 710px;
+}
+}
+
+@media screen and (max-width: 991px){
+        html{
+        font-size: 55%;
         padding: 2rem 3%;
     }
 
-    section{
+    .section{
         padding: 10rem 3% 2rem;
     }
 
@@ -931,208 +1077,318 @@ transform : translate(-50%, -50%);
     }
 }
 
-@media (max-width: 991px){
-    .header {
-        padding: 2rem 3%;
+@media screen and (max-width: 800px){
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     }
 
-    section{
-        padding: 10rem 3% 2rem;
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
     }
 
-    .footer{
-        padding: 2rem 3%;
+    .navbar.active {
+        display: block;
+    }
+
+    .nav {
+        bottom : 0px;
+    }
+
+    .home,.about{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 6rem;
+    }
+
+    .about{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .home-content {
+        width : 70%;
+        margin-top: -300px;
+        margin-bottom: 150px;
+    }
+    
+    .about-img img {
+        right: 100px;
+        justify-content: center;
+    }
+
+    .about-content {
+        width : 100%;
+        height: 100%;
+        margin-top: -170px;
+    }
+    
+    .about-content h2{
+        text-align: center;
+    }
+
+    .about-info {
+        margin-top: 70px;
+    }
+
+    .project-one {
+        top: -50px;
+    }
+
+    .project-second {
+        top:10px;
+    }
+
+    .section.resume{
+       margin-top: -100px;
+    }
+
+    .resume-box.skills{
+        margin-top: -1200px;
+    }
+
+    .resume-box.education{
+        margin-top: -800px;
+    }
+    
+    .contact {
+        margin-top: 900px;
     }
 }
 
-@media (max-width: 991px){
-    .header {
-        padding: 2rem 3%;
+@media (min-width: 600px) and (max-width: 681px){
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
     }
 
-    section{
-        padding: 10rem 3% 2rem;
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
     }
 
-    .footer{
-        padding: 2rem 3%;
+    .navbar.active {
+        display: block;
     }
-} */
 
+    .nav {
+        bottom : 0px;
+    }
 
-/* Responsive Layout for All Devices */
+    .home,.about{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 6rem;
+    }
 
-/* ========== Responsive Layout ========== */
+    .home-img {
+	    margin-top: 220px;
+	}
 
-/* Extra Small Devices (phones <576px) */
-@media (max-width: 575.98px) {
-  html {
-    font-size: 50%;
-  }
+    .about{
+        flex-direction: column;
+        width: 100%;
+    }
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem 5%;
-  }
+    .home-content {
+        margin-top: -100px;
+    }
+    
+    .about-img img {
+        right: 100px;
+        justify-content: center;
+    }
 
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding-left: 0;
-  }
+    .about-content {
+        width : 100%;
+        height: 100%;
+        margin-top: -170px;
+    }
+    
+    .about-content h2{
+        text-align: center;
+    }
 
-  .navbar a {
-    margin: 1rem 0;
-  }
+    .about-info {
+        margin-top: 70px;
+    }
 
-  .home,
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
+    .project-one {
+        top: -50px;
+    }
 
-  .home-content,
-  .home-img,
-  .about-content,
-  .about-img {
-    width: 100%;
-  }
+    .project-second {
+        top:10px;
+    }
 
-  .contact form .input-box {
-    flex-direction: column;
-  }
+    /* .section.resume{
+       margin-top: -100px;
+    } */
 
-  .contact form .input-box input {
-    width: 100%;
-  }
+     .resume-box.skills{
+        margin-top: 300px;
+    }
 
-  .tab-grid {
-    grid-template-columns: 1fr;
-  }
+    .resume-box.education{
+        margin-top: -800px;
+    }
+    
+    .contact {
+        margin-top: 900px;
+    }
 }
 
-/* Small Devices (tablets ≥576px and <768px) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-  html {
-    font-size: 55%;
-  }
+@media screen and (max-width: 681px){
+    #menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    }
 
-  header {
-    padding: 1.5rem 5%;
-  }
+    .navbar a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem;
+    }
 
-  .navbar {
-    padding-left: 0;
-  }
+    .navbar.active {
+        display: block;
+    }
 
-  .home,
-  .about {
-    flex-direction: column;
-    text-align: center;
-  }
+    .nav {
+        bottom : 0px;
+    }
 
-  .home-content,
-  .home-img,
-  .about-content,
-  .about-img {
-    width: 100%;
-  }
+    .home,.about{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 2rem;
+        padding-bottom: 6rem;
+    }
 
-  .contact form .input-box {
-    flex-direction: column;
-  }
+    .home-img {
+	    margin-top: -55px;
+	}
 
-  .contact form .input-box input {
-    width: 100%;
-  }
+    .about{
+        flex-direction: column;
+        width: 100%;
+    }
 
-  .tab-grid {
-    grid-template-columns: 1fr;
-  }
+    .home-content {
+        margin-top: -318px;
+    }
+
 }
 
-/* Medium Devices (tablets ≥768px and <992px) */
-@media (min-width: 768px) and (max-width: 991.98px) {
-  html {
-    font-size: 58%;
-  }
+/* Responsive Media Queries */
 
-  header {
-    padding: 2rem 6%;
-  }
-
-  .navbar {
-    padding-left: 0;
-  }
-
-  .home,
-  .about {
-    flex-direction: row;
-    text-align: left;
-  }
-
-  .home-content,
-  .about-content {
-    width: 60%;
-  }
-
-  .home-img,
-  .about-img {
-    width: 40%;
-  }
-
-  .contact form .input-box {
-    flex-direction: row;
-  }
-
-  .contact form .input-box input {
-    width: 48%;
-  }
-
-  .tab-grid {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  }
+/* Extra Large Screens (Desktops > 1600px) */
+@media screen and (min-width: 1600px) {
+    html { font-size: 65%; }
+    .navbar { padding-left: 900px; }
+    .home-img img, .about-img img { width: 30vw; }
+    .home-content, .about-content { width: 60%; }
 }
 
-/* Large Devices (desktops ≥992px) */
-@media (min-width: 992px) {
-  html {
-    font-size: 62.5%;
-  }
+/* Large Screens (Desktops 1200px - 1600px) */
+@media screen and (min-width: 1200px) and (max-width: 1599px) {
+    html { font-size: 60%; }
+    .navbar { padding-left: 700px; }
+    .home-img img, .about-img img { width: 35vw; }
+    .home-content, .about-content { width: 65%; }
+}
 
-  header {
-    padding: 2rem 9%;
-  }
+/* Laptops (992px - 1199px) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    html { font-size: 56.25%; }
+    .navbar { padding-left: 500px; }
+    .home, .about { flex-direction: row; gap: 2rem; }
+    .home-img img, .about-img img { width: 40vw; }
+    .home-content, .about-content { width: 70%; }
+}
 
-  .navbar {
-    padding-left: 600px;
-  }
+/* Tablets (768px - 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    html { font-size: 53.125%; }
+    #menu-icon { display: block; cursor: pointer; }
+    .navbar { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-color); padding: 1rem 3%; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .navbar.active { display: flex; }
+    .navbar a { display: block; font-size: 2rem; margin: 2rem 0; }
+    .home, .about { flex-direction: column; align-items: center; text-align: center; padding-bottom: 4rem; }
+    .home-img img, .about-img img { width: 60vw; margin: 2rem auto; position: static; }
+    .home-content, .about-content { width: 90%; margin: 0 auto; }
+    .contact { padding: 2rem; }
+    .contact form .input-box { flex-direction: column; }
+    .contact form .input-box input { width: 100%; }
+    .footer { flex-direction: column; text-align: center; }
+}
 
-  .home,
-  .about {
-    flex-direction: row;
-  }
+/* Mobile Devices (481px - 767px) */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    html { font-size: 50%; }
+    #menu-icon { display: block; cursor: pointer; }
+    .navbar { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-color); padding: 1rem 3%; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .navbar.active { display: flex; }
+    .navbar a { display: block; font-size: 2rem; margin: 2rem 0; }
+    .home, .about { flex-direction: column; align-items: center; text-align: center; padding-bottom: 4rem; }
+    .home-img img, .about-img img { width: 80vw; margin: 2rem auto; position: static; }
+    .home-content, .about-content { width: 95%; margin: 0 auto; }
+    .contact { padding: 2rem; }
+    .contact form .input-box { flex-direction: column; }
+    .contact form .input-box input { width: 100%; }
+    .footer { flex-direction: column; text-align: center; }
+}
 
-  .home-content,
-  .about-content {
-    width: 70%;
-  }
-
-  .home-img,
-  .about-img {
-    width: 30%;
-  }
-
-  .contact form .input-box {
-    flex-direction: row;
-  }
-
-  .contact form .input-box input {
-    width: 49%;
-  }
-
-  .tab-grid {
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  }
+/* Small Mobile Devices (up to 480px) */
+@media screen and (max-width: 480px) {
+    html { font-size: 45%; }
+    #menu-icon { display: block; cursor: pointer; }
+    .navbar { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--bg-color); padding: 1rem 3%; box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    .navbar.active { display: flex; }
+    .navbar a { display: block; font-size: 2rem; margin: 2rem 0; }
+    .home, .about { flex-direction: column; align-items: center; text-align: center; padding-bottom: 4rem; }
+    .home-img img, .about-img img { width: 90vw; margin: 2rem auto; position: static; }
+    .home-content, .about-content { width: 100%; margin: 0 auto; }
+    .contact { padding: 2rem; }
+    .contact form .input-box { flex-direction: column; }
+    .contact form .input-box input { width: 100%; }
+    .footer { flex-direction: column; text-align: center; }
 }
